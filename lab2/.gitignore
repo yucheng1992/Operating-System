@@ -1,0 +1,6 @@
+*.o
+*.tar.gz
+*.tgz
+cs202sh
+freecheck
+lab2*
