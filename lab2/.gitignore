@@ -1,6 +1,7 @@
 *.o
 *.tar.gz
 *.tgz
+*.swp
 cs202sh
 freecheck
 lab2*
