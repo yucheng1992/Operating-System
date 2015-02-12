@@ -212,21 +212,21 @@ cmd_free(command_t *cmd)
 	int i;
 
 	// It's OK to cmd_free(NULL).
-	if (!cmd) {
-        return;
+	if (!cmd)
+		return;
+    if (cmd->subshell)
+    {
+            cmd_free(cmd->subshell);
+            free(cmd->subshell);
     }
-    if (cmd->subshell) {
-        cmd_free(cmd->subshell);
-        free(cmd->subshell);
-    }
-    if (cmd->next) {
+        
+    if (cmd->next)
+    {
         cmd_free(cmd->next);
         free(cmd->next);
     }
-}
-
 	/* Your code here. */
-
+}
 
 
 /*
@@ -246,112 +246,109 @@ cmd_free(command_t *cmd)
 command_t *
 cmd_parse(parsestate_t *parsestate)
 {
-	int i = 0;
-	command_t *cmd = cmd_alloc();
-	if (!cmd)
-		return NULL;
-    int valid_parent = 0;
-	while (1) {
-
-		// Read the next token from 'parsestate'.
-		token_t token;
-		parse_gettoken(parsestate, &token);
-
-		// Normal tokens go in the cmd->argv[] array.
-		// Redirection file names go into cmd->redirect_filename[].
-		// Open parenthesis tokens indicate a subshell command.
-		// Other tokens complete the current command
-		// and are not actually part of it;
-		// we use parse_ungettoken() to save those tokens for later.
-
-		switch (token.type) {
-		case TOK_NORMAL:
-                    // Overflow on normal tokens
-			if (i >= MAXTOKENS || cmd->subshell)
-				goto error;
-			cmd->argv[i] = strdup(token.buffer);
-			i++;
-			break;
-		case TOK_LESS_THAN:
-		case TOK_GREATER_THAN:
-		case TOK_2_GREATER_THAN: {
-			int fd = token.type - TOK_LESS_THAN;
-			// Can't redirect nothing
-			if (i == 0 && !cmd->subshell)
-				goto error;
-            // Redirection tokens (<, >, 2>) must be followed by
-            // TOK_NORMAL tokens containing file names.
-			parse_gettoken(parsestate, &token);
-			if (token.type != TOK_NORMAL)
-				goto error;
-			free(cmd->redirect_filename[fd]);
-			cmd->redirect_filename[fd] = strdup(token.buffer);
-			break;
-		}
-		case TOK_OPEN_PAREN:
-
-             // EXERCISE: Handle parentheses.
-             // NOTE the following:
-             //     --Parentheses in the shell do not act like
-             //     mathematical parentheses.
-             //     --In particular, a parenthesized subcommand cannot
-             //     be part of the same command as other normal tokens.
-             //     For example, "echo ( echo foo )",
-             //                  "( echo foo ) echo", and
-             //                  "(echo foo) (echo foo)"
-             //
-             //     are all syntax errors.  (You should figure out
-             //     exactly how to check for this kind of error. Try
-             //     interacting with the actual 'bash' shell for some
-             //     ideas.)
-             //
-             // Some hints for the code:
-             //     --An open parenthesis should recursively call
-             //     cmd_line_parse(). The command_t structure has a slot
-             //     you can use.
-             //     --'goto error' when you encounter an error,
-             //     which frees the current command and returns NULL.
-             //     --You will need to adjust the logic in the "done:"
-             //     block, below. Otherwise, a subshell will be regarded as
-             //     an error (why?)
-             //     --You don't have to write a lot of code here, but
-             //     you will have to understand how the pieces that you
-             //     have been given fit together. (It may be helpful to
-             //     look over cmdparse.h again.)
-            /* Your code here. */
-            cmd->subshell = cmd_line_parse(parsestate, 1);
-            if (cmd->subshell) {
-                valid_parent = 1;
-                break;
-            } else {
-                goto error;
-            }
-        case TOK_CLOSE_PAREN:
-            parse_ungettoken(parsestate);
-            goto done;
-        default:
-			parse_ungettoken(parsestate);
-			goto done;
-		}
-	}
-
- done:
-	// NULL-terminate the argv list
-	cmd->argv[i] = 0;
-    if (cmd->subshell != NULL && i > 1) {
-        cmd_free(cmd->subshell);
+    int i = 0;
+    command_t *cmd = cmd_alloc();
+    if (!cmd)
         return NULL;
+    
+    tokentype_t last_token_type = TOK_END;
+    while (1) {
+        // EXERCISE: Read the next token from 'parsestate'.
+        
+        // Normal tokens go in the cmd->argv[] array.
+        // Redirection file names go into cmd->redirect_filename[].
+        // Open parenthesis tokens indicate a subshell command.
+        // Other tokens complete the current command
+        // and are not actually part of it;
+        // use parse_ungettoken() to save those tokens for later.
+        
+        // There are a couple errors you should check.
+        // First, be careful about overflow on normal tokens.
+        // Each command_t only has space for MAXTOKENS tokens in
+        // 'argv'. If there are too many tokens, reject the whole
+        // command.
+        // Second, redirection tokens (<, >, 2>) must be followed by
+        // TOK_NORMAL tokens containing file names.
+        // Third, a parenthesized subcommand can't be part of the
+        // same command as other normal tokens.  For example,
+        // "echo ( echo foo )" and "( echo foo ) echo" are both errors.
+        // (You should figure out exactly how to check for this kind
+        // of error. Try interacting with the actual 'bash' shell
+        // for some ideas.)
+        // 'goto error' when you encounter one of these errors,
+        // which frees the current command and returns NULL.
+        
+        // Hint: An open parenthesis should recursively call
+        // command_line_parse(). The command_t structure has a slot
+        // you can use for parens; figure out how to use it!
+        if (i == MAXTOKENS)
+            goto error;
+        
+        token_t token;
+        parse_gettoken(parsestate, &token);
+        
+        switch (token.type) {
+            case TOK_NORMAL:
+                cmd->argv[i] = strdup(token.buffer);
+                i++;
+                break;
+            case TOK_LESS_THAN:
+                parse_gettoken(parsestate, &token);
+                if (token.type == TOK_NORMAL)
+                    cmd->redirect_filename[STDIN_FILENO] = strdup(token.buffer);
+                else
+                    goto error;
+                break;
+            case TOK_GREATER_THAN:
+                parse_gettoken(parsestate, &token);
+                if (token.type == TOK_NORMAL)
+                    cmd->redirect_filename[STDOUT_FILENO] = strdup(token.buffer);
+                else
+                    goto error;
+                break;
+            case TOK_2_GREATER_THAN:
+                parse_gettoken(parsestate, &token);
+                if (token.type == TOK_NORMAL)
+                    cmd->redirect_filename[STDERR_FILENO] = strdup(token.buffer);
+                else
+                    goto error;
+                break;
+            case TOK_OPEN_PAREN:
+                if (last_token_type != TOK_NORMAL)
+                    cmd->subshell = cmd_line_parse(parsestate, 1);
+                else
+                    goto error;
+                break;
+            case TOK_CLOSE_PAREN:
+                parse_ungettoken(parsestate);
+                goto done;
+            case TOK_ERROR:
+                goto error;
+            case TOK_END:
+                goto done;
+            default:
+                parse_ungettoken(parsestate);
+                goto done;
+        }
+        last_token_type = token.type;
     }
-	if (i == 0 && !valid_parent) {
-		/* Empty command */
-		cmd_free(cmd);
-		return NULL;
-	} else
-		return cmd;
-
- error:
-	cmd_free(cmd);
-	return NULL;
+    
+done:
+    // NULL-terminate the argv list
+    cmd->argv[i] = 0;
+    
+    // EXERCISE: Make sure you return the right return value!
+    
+    if (i == 0 && cmd->subshell == NULL) {
+        /* Empty command */
+        cmd_free(cmd);
+        return NULL;
+    } else
+        return cmd;
+    
+error:
+    cmd_free(cmd);
+    return NULL;
 }
 
 
