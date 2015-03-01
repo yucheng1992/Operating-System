@@ -1,0 +1,6 @@
+mkbootdisk
+obj
+schedos.img
+log.txt
+.gdbinit
+*.tgz

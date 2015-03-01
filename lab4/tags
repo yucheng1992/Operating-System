@@ -1,0 +1,477 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AR	build/rules.mk	/^AR	= $(GCCPREFIX)ar$/;"	m
+AS	build/rules.mk	/^AS	= $(GCCPREFIX)as$/;"	m
+BOOT_OBJS	GNUmakefile	/^BOOT_OBJS = $(OBJDIR)\/bootstart.o $(OBJDIR)\/boot.o$/;"	m
+CC	build/rules.mk	/^CC	= $(GCCPREFIX)gcc$/;"	m
+CFLAGS	build/rules.mk	/^CFLAGS	:= $(CFLAGS) $(DEFS) $(LABDEFS) -m32 -Os -ffreestanding -fomit-frame-pointer -I. -MD -Wall -Wno-format -Wno-unused -Werror -ggdb -nostdinc$/;"	m
+CIMS_QEMU_PATH	build/rules.mk	/^CIMS_QEMU_PATH	= \/usr\/local\/pkg\/qemu\/1.7.0\/bin\/$/;"	m
+CONSOLE_BEGIN	lib.h	51;"	d
+CONSOLE_END	lib.h	52;"	d
+CR0_AM	x86.h	110;"	d
+CR0_CD	x86.h	112;"	d
+CR0_EM	x86.h	105;"	d
+CR0_ET	x86.h	107;"	d
+CR0_MP	x86.h	104;"	d
+CR0_NE	x86.h	108;"	d
+CR0_NW	x86.h	111;"	d
+CR0_PE	x86.h	103;"	d
+CR0_PG	x86.h	113;"	d
+CR0_TS	x86.h	106;"	d
+CR0_WP	x86.h	109;"	d
+CXX	build/rules.mk	/^CXX	= $(GCCPREFIX)c++$/;"	m
+DECLARE_X86_FUNCTION	x86.h	65;"	d
+DISTDIR	build/rules.mk	/^DISTDIR = lab4$/;"	m
+EFLAGS_AC	x86.h	133;"	d
+EFLAGS_AF	x86.h	118;"	d
+EFLAGS_CF	x86.h	116;"	d
+EFLAGS_DF	x86.h	123;"	d
+EFLAGS_ID	x86.h	136;"	d
+EFLAGS_IF	x86.h	122;"	d
+EFLAGS_IOPL_0	x86.h	126;"	d
+EFLAGS_IOPL_1	x86.h	127;"	d
+EFLAGS_IOPL_2	x86.h	128;"	d
+EFLAGS_IOPL_3	x86.h	129;"	d
+EFLAGS_IOPL_MASK	x86.h	125;"	d
+EFLAGS_NT	x86.h	130;"	d
+EFLAGS_OF	x86.h	124;"	d
+EFLAGS_PF	x86.h	117;"	d
+EFLAGS_RF	x86.h	131;"	d
+EFLAGS_SF	x86.h	120;"	d
+EFLAGS_TF	x86.h	121;"	d
+EFLAGS_VIF	x86.h	134;"	d
+EFLAGS_VIP	x86.h	135;"	d
+EFLAGS_VM	x86.h	132;"	d
+EFLAGS_ZF	x86.h	119;"	d
+ELFHDR	boot.c	48;"	d	file:
+ELF_MAGIC	elf.h	4;"	d
+ELF_PROG_FLAG_EXEC	elf.h	52;"	d
+ELF_PROG_FLAG_READ	elf.h	54;"	d
+ELF_PROG_FLAG_WRITE	elf.h	53;"	d
+ELF_PROG_LOAD	elf.h	49;"	d
+ELF_SHN_UNDEF	elf.h	63;"	d
+ELF_SHT_NULL	elf.h	57;"	d
+ELF_SHT_PROGBITS	elf.h	58;"	d
+ELF_SHT_STRTAB	elf.h	60;"	d
+ELF_SHT_SYMTAB	elf.h	59;"	d
+Elf	elf.h	/^struct Elf {$/;"	s
+FLAG_ALT	lib.c	104;"	d	file:
+FLAG_LEFTJUSTIFY	lib.c	106;"	d	file:
+FLAG_PLUSPOSITIVE	lib.c	108;"	d	file:
+FLAG_SPACEPOSITIVE	lib.c	107;"	d	file:
+FLAG_ZERO	lib.c	105;"	d	file:
+GCCPREFIX	build/rules.mk	/^GCCPREFIX := $(shell if i386-jos-elf-objdump -i 2>&1 | grep '^elf32-i386$$' >\/dev\/null 2>&1 && i386-jos-elf-gcc -E -x c \/dev\/null >\/dev\/null 2>&1; \\$/;"	m
+GDBPORT	build/rules.mk	/^GDBPORT = 20000$/;"	m
+HOSTCC	build/rules.mk	/^HOSTCC	= gcc$/;"	m
+HZ	kernel.h	37;"	d
+IMAGE	GNUmakefile	/^IMAGE = schedos.img$/;"	m
+INFERRED_QEMU	build/rules.mk	/^INFERRED_QEMU := $(shell if which qemu-system-i386 2>\/dev\/null | grep ^\/ >\/dev\/null 2>&1; \\$/;"	m
+INT_CLOCK	kernel.h	41;"	d
+INT_HARDWARE	kernel.h	40;"	d
+INT_SYS_EXIT	schedos.h	16;"	d
+INT_SYS_USER1	schedos.h	17;"	d
+INT_SYS_USER2	schedos.h	18;"	d
+INT_SYS_YIELD	schedos.h	15;"	d
+IO_PIC1	x86.c	139;"	d	file:
+IO_PIC2	x86.c	140;"	d	file:
+IO_TIMER1	x86.c	145;"	d	file:
+IRQ_SLAVE	x86.c	142;"	d	file:
+KBDATAP	x86.c	274;"	d	file:
+KBSTATP	x86.c	272;"	d	file:
+KBS_DIB	x86.c	273;"	d	file:
+KERNEL_LINKER_FILES	GNUmakefile	/^KERNEL_LINKER_FILES = link\/shared.ld$/;"	m
+KERNEL_OBJS	GNUmakefile	/^KERNEL_OBJS = $(OBJDIR)\/k-int.o $(OBJDIR)\/kernel.o \\$/;"	m
+KERNEL_STACK_TOP	kernel.h	44;"	d
+LAB_MAIN_NAME	build/rules.mk	/^LAB_MAIN_NAME = lab$(LAB_NUM)$/;"	m
+LAB_NUM	build/rules.mk	/^LAB_NUM = 4$/;"	m
+LD	build/rules.mk	/^LD	= $(GCCPREFIX)ld$/;"	m
+LDFLAGS	build/rules.mk	/^LDFLAGS	:= $(LDFLAGS)$/;"	m
+MAX	types.h	55;"	d
+MAX_IRQS	x86.c	136;"	d	file:
+MIN	types.h	49;"	d
+NM	build/rules.mk	/^NM	= $(GCCPREFIX)nm$/;"	m
+NPROCS	kernel.c	20;"	d	file:
+NULL	types.h	6;"	d
+NUMBUFSIZ	lib.c	115;"	d	file:
+OBJCOPY	build/rules.mk	/^OBJCOPY	= $(GCCPREFIX)objcopy$/;"	m
+OBJDIR	build/rules.mk	/^OBJDIR	= obj$/;"	m
+OBJDUMP	build/rules.mk	/^OBJDUMP	= $(GCCPREFIX)objdump$/;"	m
+PACKAGEDATE	conf/date.mk	/^PACKAGEDATE=Thu Feb 26 00:27:18 EST 2015$/;"	m
+PAGESIZE	boot.c	47;"	d	file:
+PAGESIZE	k-loader.c	16;"	d	file:
+PERL	build/rules.mk	/^PERL	= perl$/;"	m
+PRINTCHAR	p-schedos-app-1.c	18;"	d	file:
+PRINTCHAR	p-schedos-app-2.c	8;"	d	file:
+PRINTCHAR	p-schedos-app-3.c	8;"	d	file:
+PRINTCHAR	p-schedos-app-4.c	8;"	d	file:
+PROC1_START	kernel.c	21;"	d	file:
+PROCESS_BINARIES	GNUmakefile	/^PROCESS_BINARIES = $(patsubst %.c,$(OBJDIR)\/%,$(PROCESS_SRCS))$/;"	m
+PROCESS_LIB_OBJS	GNUmakefile	/^PROCESS_LIB_OBJS = $(OBJDIR)\/lib.o$/;"	m
+PROCESS_OBJS	GNUmakefile	/^PROCESS_OBJS = $(patsubst %.c,$(OBJDIR)\/%.o,$(PROCESS_SRCS))$/;"	m
+PROCESS_SRCS	GNUmakefile	/^PROCESS_SRCS = $(wildcard p-*.c)$/;"	m
+PROC_SIZE	kernel.c	22;"	d	file:
+P_BLOCKED	kernel.h	/^	P_BLOCKED,			\/\/ This process is blocked$/;"	e	enum:procstate
+P_EMPTY	kernel.h	/^	P_EMPTY = 0,			\/\/ The process table entry is empty$/;"	e	enum:procstate
+P_RUNNABLE	kernel.h	/^	P_RUNNABLE,			\/\/ This process is runnable$/;"	e	enum:procstate
+P_ZOMBIE	kernel.h	/^	P_ZOMBIE			\/\/ This process has exited (but note$/;"	e	enum:procstate
+Proghdr	elf.h	/^struct Proghdr {$/;"	s
+QEMU	build/rules.mk	/^QEMU ?= $(INFERRED_QEMU)$/;"	m
+QEMUOPT	build/rules.mk	/^QEMUOPT	= -net none -parallel file:log.txt -k en-us -icount 7$/;"	m
+QEMU_PATH	build/rules.mk	/^QEMU_PATH = $(shell if which $(QEMU) 2>\/dev\/null | grep ^\/ >\/dev\/null 2>&1; \\$/;"	m
+QEMU_PRELOAD	build/rules.mk	/^QEMU_PRELOAD = $(shell if test -r $(QEMU_PRELOAD_LIBRARY); then echo LD_PRELOAD=$(QEMU_PRELOAD_LIBRARY); fi)$/;"	m
+QEMU_PRELOAD_LIBRARY	build/rules.mk	/^QEMU_PRELOAD_LIBRARY = $(OBJDIR)\/libqemu-nograb.so.1$/;"	m
+ROUNDDOWN	types.h	64;"	d
+ROUNDUP	types.h	70;"	d
+RUNCOUNT	process.h	14;"	d
+SDL_GetAppState	build/qemu-nograb.c	/^int SDL_GetAppState(void) {$/;"	f
+SDL_GetWindowFlags	build/qemu-nograb.c	/^int SDL_GetWindowFlags(void) {$/;"	f
+SECTORSIZE	boot.c	46;"	d	file:
+SECTORSIZE	k-loader.c	15;"	d	file:
+SEG	bootstart.S	/^#define SEG(type,base,lim)						\\$/;"	d
+SEG	x86.h	492;"	d
+SEG16	x86.h	501;"	d
+SEGSEL_APP_CODE	x86.c	42;"	d	file:
+SEGSEL_APP_DATA	x86.c	43;"	d	file:
+SEGSEL_KERN_CODE	x86.c	40;"	d	file:
+SEGSEL_KERN_DATA	x86.c	41;"	d	file:
+SEGSEL_TASKSTATE	x86.c	44;"	d	file:
+SEG_FAULT	x86.h	488;"	d
+SEG_NULL	bootstart.S	/^#define SEG_NULL							\\$/;"	d
+SEG_NULL	x86.h	484;"	d
+SETGATE	x86.h	404;"	d
+STA_A	x86.h	515;"	d
+STA_C	x86.h	512;"	d
+STA_E	x86.h	511;"	d
+STA_R	bootstart.S	/^#define STA_R	0x2	    \/\/ Readable (executable segments)$/;"	d
+STA_R	x86.h	514;"	d
+STA_W	bootstart.S	/^#define STA_W	0x2	    \/\/ Writeable (non-executable segments)$/;"	d
+STA_W	x86.h	513;"	d
+STA_X	bootstart.S	/^#define STA_X	0x8	    \/\/ Executable segment$/;"	d
+STA_X	x86.h	510;"	d
+STRIP	build/rules.mk	/^STRIP	= $(GCCPREFIX)strip$/;"	m
+STS_CG16	x86.h	521;"	d
+STS_CG32	x86.h	527;"	d
+STS_IG16	x86.h	523;"	d
+STS_IG32	x86.h	528;"	d
+STS_LDT	x86.h	519;"	d
+STS_T16A	x86.h	518;"	d
+STS_T16B	x86.h	520;"	d
+STS_T32A	x86.h	525;"	d
+STS_T32B	x86.h	526;"	d
+STS_TG	x86.h	522;"	d
+STS_TG16	x86.h	524;"	d
+STS_TG32	x86.h	529;"	d
+Secthdr	elf.h	/^struct Secthdr {$/;"	s
+TAR	build/rules.mk	/^TAR	= tar$/;"	m
+TIMER_16BIT	x86.c	149;"	d	file:
+TIMER_DIV	x86.c	153;"	d	file:
+TIMER_FREQ	x86.c	152;"	d	file:
+TIMER_MODE	x86.c	146;"	d	file:
+TIMER_RATEGEN	x86.c	148;"	d	file:
+TIMER_SEL0	x86.c	147;"	d	file:
+V	GNUmakefile	/^V = 0$/;"	m
+WEENSYOS_ELF_H	elf.h	2;"	d
+WEENSYOS_KERN_H	kernel.h	2;"	d
+WEENSYOS_LIB_H	lib.h	2;"	d
+WEENSYOS_PROCESS_H	process.h	2;"	d
+WEENSYOS_SCHEDOS_H	schedos.h	2;"	d
+WEENSYOS_TYPES_H	types.h	2;"	d
+WEENSYOS_X86SYNC_H	x86sync.h	2;"	d
+WEENSYOS_X86_H	x86.h	2;"	d
+_GNU_SOURCE	build/qemu-nograb.c	5;"	d	file:
+__va_size	lib.h	22;"	d
+_generic_int_handler	k-int.S	/^_generic_int_handler:$/;"	l
+atomic_swap	x86sync.h	/^atomic_swap(void *addr, uint32_t val)$/;"	f
+begin	k-loader.c	/^	void *begin;$/;"	m	struct:ramimage	file:
+bool_t	types.h	/^typedef int bool_t;$/;"	t
+bootmain	boot.c	/^bootmain(void)$/;"	f
+breakpoint	x86.h	/^breakpoint(void)$/;"	f
+calloc	build/qemu-nograb.c	/^void* calloc(size_t nmemb, size_t sz) {$/;"	f
+check	build/qemu-nograb.c	/^static void check(void) {$/;"	f	file:
+clock_int_handler	k-int.S	/^clock_int_handler:$/;"	l
+comma	build/rules.mk	/^comma = ,$/;"	m
+compare_and_swap	x86sync.h	/^compare_and_swap(void *addr, uint32_t expected, uint32_t desired)$/;"	f
+compile	GNUmakefile	/^compile = $(CC) $(CPPFLAGS) $(CFLAGS) $(DEPCFLAGS) $(1)$/;"	m
+compile	GNUmakefile	/^compile = @\/bin\/echo " " $(2) $< && $(CC) $(CPPFLAGS) $(CFLAGS) $(DEPCFLAGS) $(1)$/;"	m
+console_clear	x86.c	/^console_clear(void)$/;"	f
+console_printf	lib.c	/^console_printf(uint16_t *cursor, int color, const char *format, ...)$/;"	f
+console_putc	lib.c	/^console_putc(uint16_t *cursor, unsigned char c, int color)$/;"	f	file:
+console_read_digit	x86.c	/^console_read_digit(void)$/;"	f
+console_vprintf	lib.c	/^console_vprintf(uint16_t *cursor, int color, const char *format, va_list val)$/;"	f
+copyseg	k-loader.c	/^copyseg(void *dst, const uint8_t *src, uint32_t filesz, uint32_t memsz)$/;"	f	file:
+cpuid	x86.h	/^cpuid(uint32_t info, uint32_t *eaxp, uint32_t *ebxp, uint32_t *ecxp, uint32_t *edxp)$/;"	f
+curoff	build/mkbootdisk.c	/^off_t curoff = 0;$/;"	v
+current	kernel.c	/^process_t *current;$/;"	v
+default_int_handler	k-int.S	/^default_int_handler:$/;"	l
+die	check-lab.sh	/^function die() {$/;"	f
+diskfd	build/mkbootdisk.c	/^int diskfd;$/;"	v
+diskwrite	build/mkbootdisk.c	/^diskwrite(const void *data, size_t amt)$/;"	f
+e_ehsize	elf.h	/^	uint16_t e_ehsize;$/;"	m	struct:Elf
+e_elf	elf.h	/^	uint8_t e_elf[12];$/;"	m	struct:Elf
+e_entry	elf.h	/^	uint32_t e_entry;$/;"	m	struct:Elf
+e_flags	elf.h	/^	uint32_t e_flags;$/;"	m	struct:Elf
+e_machine	elf.h	/^	uint16_t e_machine;$/;"	m	struct:Elf
+e_magic	elf.h	/^	uint32_t e_magic;	\/\/ must equal ELF_MAGIC$/;"	m	struct:Elf
+e_phentsize	elf.h	/^	uint16_t e_phentsize;$/;"	m	struct:Elf
+e_phnum	elf.h	/^	uint16_t e_phnum;$/;"	m	struct:Elf
+e_phoff	elf.h	/^	uint32_t e_phoff;$/;"	m	struct:Elf
+e_shentsize	elf.h	/^	uint16_t e_shentsize;$/;"	m	struct:Elf
+e_shnum	elf.h	/^	uint16_t e_shnum;$/;"	m	struct:Elf
+e_shoff	elf.h	/^	uint32_t e_shoff;$/;"	m	struct:Elf
+e_shstrndx	elf.h	/^	uint16_t e_shstrndx;$/;"	m	struct:Elf
+e_type	elf.h	/^	uint16_t e_type;$/;"	m	struct:Elf
+e_version	elf.h	/^	uint32_t e_version;$/;"	m	struct:Elf
+end	k-loader.c	/^	void *end;$/;"	m	struct:ramimage	file:
+fake_qemu_put_mouse_event	build/qemu-nograb.c	/^typedef struct fake_qemu_put_mouse_event {$/;"	s	file:
+fake_qemu_put_mouse_event	build/qemu-nograb.c	/^} fake_qemu_put_mouse_event;$/;"	t	typeref:struct:fake_qemu_put_mouse_event	file:
+fetch_and_add	x86sync.h	/^fetch_and_add(uint32_t *addr, uint32_t delta)$/;"	f
+fill_numbuf	lib.c	/^fill_numbuf(char *numbuf_end, uint32_t val, int base, const char *digits,$/;"	f	file:
+flag_chars	lib.c	/^static const char flag_chars[] = "#0- +";$/;"	v	file:
+fopencheck	build/mkbootdisk.c	/^fopencheck(const char *name)$/;"	f
+gatedescriptor	x86.h	/^typedef struct gatedescriptor {$/;"	s
+gatedescriptor_t	x86.h	/^} gatedescriptor_t;$/;"	t	typeref:struct:gatedescriptor
+gd_args	x86.h	/^	unsigned gd_args : 5;        \/\/ # args, 0 for interrupt\/trap gates$/;"	m	struct:gatedescriptor
+gd_dpl	x86.h	/^	unsigned gd_dpl : 2;         \/\/ descriptor(meaning new) privilege level$/;"	m	struct:gatedescriptor
+gd_off_15_0	x86.h	/^	unsigned gd_off_15_0 : 16;   \/\/ low 16 bits of offset in segment$/;"	m	struct:gatedescriptor
+gd_off_31_16	x86.h	/^	unsigned gd_off_31_16 : 16;  \/\/ high bits of offset in segment$/;"	m	struct:gatedescriptor
+gd_p	x86.h	/^	unsigned gd_p : 1;           \/\/ Present$/;"	m	struct:gatedescriptor
+gd_rsv1	x86.h	/^	unsigned gd_rsv1 : 3;        \/\/ reserved(should be zero I guess)$/;"	m	struct:gatedescriptor
+gd_s	x86.h	/^	unsigned gd_s : 1;           \/\/ must be 0 (system)$/;"	m	struct:gatedescriptor
+gd_ss	x86.h	/^	unsigned gd_ss : 16;         \/\/ segment selector$/;"	m	struct:gatedescriptor
+gd_type	x86.h	/^	unsigned gd_type : 4;        \/\/ type(STS_{TG,IG32,TG32})$/;"	m	struct:gatedescriptor
+gdt	bootstart.S	/^gdt:		SEG_NULL				# null seg$/;"	l
+gdtdesc	bootstart.S	/^gdtdesc:	.word	0x17			# sizeof(gdt) - 1$/;"	l
+global_descriptor_table	x86.c	/^pseudodescriptor_t global_descriptor_table = {$/;"	v
+idtd_base	x86.h	/^	uint32_t idtd_base;		\/\/ Base address$/;"	m	struct:pseudodescriptor
+idtd_lim	x86.h	/^	uint16_t idtd_lim;              \/\/ Limit$/;"	m	struct:pseudodescriptor
+inb	x86.h	/^inb(int port)$/;"	f
+index	build/qemu-nograb.c	/^    int index;$/;"	m	struct:fake_qemu_put_mouse_event	file:
+inl	x86.h	/^inl(int port)$/;"	f
+insb	x86.h	/^insb(int port, void *addr, int cnt)$/;"	f
+insl	x86.h	/^insl(int port, void *addr, int cnt)$/;"	f
+insw	x86.h	/^insw(int port, void *addr, int cnt)$/;"	f
+int16_t	types.h	/^typedef short int16_t;$/;"	t
+int32_t	types.h	/^typedef long int32_t;$/;"	t
+int64_t	types.h	/^typedef long long int64_t;$/;"	t
+int8_t	types.h	/^typedef signed char int8_t;$/;"	t
+interrupt	kernel.c	/^interrupt(registers_t *reg)$/;"	f
+interrupt_controller_init	x86.c	/^interrupt_controller_init(bool_t allow_clock_interrupt)$/;"	f
+interrupt_descriptor_table	x86.c	/^pseudodescriptor_t interrupt_descriptor_table = {$/;"	v
+interrupt_descriptors	x86.c	/^static gatedescriptor_t interrupt_descriptors[256];	\/* initialized below *\/$/;"	v	file:
+intptr_t	types.h	/^typedef int32_t intptr_t;$/;"	t
+invlpg	x86.h	/^invlpg(void *addr)$/;"	f
+inw	x86.h	/^inw(int port)$/;"	f
+kernel_task_descriptor	x86.c	/^static taskstate_t kernel_task_descriptor;$/;"	v	file:
+lcr0	x86.h	/^lcr0(uint32_t val)$/;"	f
+lcr3	x86.h	/^lcr3(pagedirectory_t val)$/;"	f
+lcr4	x86.h	/^lcr4(uint32_t val)$/;"	f
+lidt	x86.h	/^lidt(void *p)$/;"	f
+link	GNUmakefile	/^link = $(LD) $(LDFLAGS) $(1)$/;"	m
+link	GNUmakefile	/^link = @\/bin\/echo " " $(2) $(patsubst %.full,%,$@) && $(LD) $(LDFLAGS) $(1)$/;"	m
+lldt	x86.h	/^lldt(uint16_t sel)$/;"	f
+loader_panic	k-loader.c	/^loader_panic(void)$/;"	f	file:
+lower_digits	lib.c	/^static const char lower_digits[] = "0123456789abcdef";$/;"	v	file:
+ltr	x86.h	/^ltr(uint16_t sel)$/;"	f
+main	build/mkbootdisk.c	/^main(int argc, char *argv[])$/;"	f
+malloc	build/qemu-nograb.c	/^void* malloc(size_t sz) {$/;"	f
+maxoff	build/mkbootdisk.c	/^off_t maxoff = 0;$/;"	v
+memcpy	lib.c	/^memcpy(void *dst, const void *src, size_t n)$/;"	f
+memmove	lib.c	/^memmove(void *dst, const void *src, size_t n)$/;"	f
+memset	lib.c	/^memset(void *v, int c, size_t n)$/;"	f
+mouse_string	build/qemu-nograb.c	/^static const char mouse_string[] = "QEMU PS\/2 Mouse";$/;"	v	file:
+multiboot	k-int.S	/^multiboot:$/;"	l
+multiboot_start	k-int.S	/^multiboot_start:$/;"	l
+next_calloc	build/qemu-nograb.c	/^static void* (*next_calloc)(size_t nmemb, size_t sz);$/;"	v	file:
+next_malloc	build/qemu-nograb.c	/^static void* (*next_malloc)(size_t sz);$/;"	v	file:
+node_next	build/qemu-nograb.c	/^    void* node_next;$/;"	m	struct:fake_qemu_put_mouse_event	file:
+node_prev	build/qemu-nograb.c	/^    void* node_prev;$/;"	m	struct:fake_qemu_put_mouse_event	file:
+off_t	types.h	/^typedef int32_t off_t;$/;"	t
+offsetof	types.h	77;"	d
+outb	x86.h	/^outb(int port, uint8_t data)$/;"	f
+outl	x86.h	/^outl(int port, uint32_t data)$/;"	f
+outsb	x86.h	/^outsb(int port, const void *addr, int cnt)$/;"	f
+outsl	x86.h	/^outsl(int port, const void *addr, int cnt)$/;"	f
+outsw	x86.h	/^outsw(int port, const void *addr, int cnt)$/;"	f
+outw	x86.h	/^outw(int port, uint16_t data)$/;"	f
+p_align	elf.h	/^	uint32_t p_align;$/;"	m	struct:Proghdr
+p_exit_status	kernel.h	/^	int p_exit_status;		\/\/ Process's exit status$/;"	m	struct:process
+p_filesz	elf.h	/^	uint32_t p_filesz;$/;"	m	struct:Proghdr
+p_flags	elf.h	/^	uint32_t p_flags;$/;"	m	struct:Proghdr
+p_memsz	elf.h	/^	uint32_t p_memsz;$/;"	m	struct:Proghdr
+p_offset	elf.h	/^	uint32_t p_offset;$/;"	m	struct:Proghdr
+p_pa	elf.h	/^	uint32_t p_pa;$/;"	m	struct:Proghdr
+p_pid	kernel.h	/^	pid_t p_pid;			\/\/ Process ID$/;"	m	struct:process
+p_registers	kernel.h	/^	registers_t p_registers;	\/\/ Current process state: registers,$/;"	m	struct:process
+p_state	kernel.h	/^	procstate_t p_state;		\/\/ Process state; see above$/;"	m	struct:process
+p_type	elf.h	/^	uint32_t p_type;$/;"	m	struct:Proghdr
+p_va	elf.h	/^	uint32_t p_va;$/;"	m	struct:Proghdr
+pagedirectory_t	types.h	/^typedef pte_t *pagedirectory_t;$/;"	t
+physaddr_t	types.h	/^typedef uint32_t physaddr_t;$/;"	t
+pid_t	types.h	/^typedef int32_t pid_t;$/;"	t
+pmain	p-schedos-app-1.c	/^pmain(void)$/;"	f
+ppn_t	types.h	/^typedef uint32_t ppn_t;$/;"	t
+proc_array	kernel.c	/^static process_t proc_array[NPROCS];$/;"	v	file:
+process	kernel.h	/^typedef struct process {$/;"	s
+process_t	kernel.h	/^} process_t;$/;"	t	typeref:struct:process
+procstate	kernel.h	/^typedef enum procstate {$/;"	g
+procstate_t	kernel.h	/^} procstate_t;$/;"	t	typeref:enum:procstate
+program_loader	k-loader.c	/^program_loader(int program_id, uint32_t *entry_point)$/;"	f
+protcseg	bootstart.S	/^protcseg:	movw	$SEGSEL_BOOT_DATA, %ax	# Our data segment selector$/;"	l
+pseudodescriptor	x86.h	/^struct pseudodescriptor {$/;"	s
+pseudodescriptor_t	x86.h	/^typedef struct pseudodescriptor pseudodescriptor_t;$/;"	t	typeref:struct:pseudodescriptor
+pte_t	types.h	/^typedef uint32_t pte_t;$/;"	t
+qemu_put_mouse_event	build/qemu-nograb.c	/^    void* qemu_put_mouse_event;$/;"	m	struct:fake_qemu_put_mouse_event	file:
+qemu_put_mouse_event_absolute	build/qemu-nograb.c	/^    int qemu_put_mouse_event_absolute;$/;"	m	struct:fake_qemu_put_mouse_event	file:
+qemu_put_mouse_event_name	build/qemu-nograb.c	/^    char* qemu_put_mouse_event_name;$/;"	m	struct:fake_qemu_put_mouse_event	file:
+qemu_put_mouse_event_opaque	build/qemu-nograb.c	/^    void* qemu_put_mouse_event_opaque;$/;"	m	struct:fake_qemu_put_mouse_event	file:
+ramimage	k-loader.c	/^struct ramimage {$/;"	s	file:
+ramimages	k-loader.c	/^} ramimages[] = {$/;"	v	typeref:struct:ramimage
+rcr0	x86.h	/^rcr0(void)$/;"	f
+rcr2	x86.h	/^rcr2(void)$/;"	f
+rcr3	x86.h	/^rcr3(void)$/;"	f
+rcr4	x86.h	/^rcr4(void)$/;"	f
+read_cycle_counter	x86.h	/^read_cycle_counter(void)$/;"	f
+read_ebp	x86.h	/^read_ebp(void)$/;"	f
+read_eflags	x86.h	/^read_eflags(void)$/;"	f
+read_esp	x86.h	/^read_esp(void)$/;"	f
+readdeps	mergedep.pl	/^sub readdeps {$/;"	s
+readsect	boot.c	/^readsect(void *dst, uint32_t sect)$/;"	f
+readseg	boot.c	/^readseg(uint32_t va, uint32_t filesz, uint32_t memsz, uint32_t sect)$/;"	f
+real_to_prot	bootstart.S	/^real_to_prot:	cli			# Don't allow interrupts: mandatory,$/;"	l
+reg_cs	x86.h	/^	uint16_t reg_cs;		\/\/ EIP, code segment, flags (eflags)$/;"	m	struct:registers
+reg_ds	x86.h	/^	uint16_t reg_ds;$/;"	m	struct:registers
+reg_eax	x86.h	/^	uint32_t reg_eax;$/;"	m	struct:registers
+reg_ebp	x86.h	/^	uint32_t reg_ebp;$/;"	m	struct:registers
+reg_ebx	x86.h	/^	uint32_t reg_ebx;$/;"	m	struct:registers
+reg_ecx	x86.h	/^	uint32_t reg_ecx;$/;"	m	struct:registers
+reg_edi	x86.h	/^	uint32_t reg_edi;		\/\/ (1) General CPU registers$/;"	m	struct:registers
+reg_edx	x86.h	/^	uint32_t reg_edx;$/;"	m	struct:registers
+reg_eflags	x86.h	/^	uint32_t reg_eflags;$/;"	m	struct:registers
+reg_eip	x86.h	/^	uint32_t reg_eip;		\/\/ (4) Task status$/;"	m	struct:registers
+reg_err	x86.h	/^	uint32_t reg_err;		\/\/ code (optional; supplied by x86$/;"	m	struct:registers
+reg_es	x86.h	/^	uint16_t reg_es;		\/\/ (2) Extra segments %es and %ds$/;"	m	struct:registers
+reg_esi	x86.h	/^	uint32_t reg_esi;		\/\/ order defined by 'pushal'$/;"	m	struct:registers
+reg_esp	x86.h	/^	uint32_t reg_esp;		\/\/ (5) Stack registers$/;"	m	struct:registers
+reg_intno	x86.h	/^	uint32_t reg_intno;		\/\/ (3) Interrupt number and error$/;"	m	struct:registers
+reg_original_esp	x86.h	/^	uint32_t reg_original_esp;$/;"	m	struct:registers
+reg_padding1	x86.h	/^	uint16_t reg_padding1;$/;"	m	struct:registers
+reg_padding2	x86.h	/^	uint16_t reg_padding2;$/;"	m	struct:registers
+reg_padding3	x86.h	/^	uint16_t reg_padding3;		\/\/ in the order required by 'iret'$/;"	m	struct:registers
+reg_padding4	x86.h	/^	uint16_t reg_padding4;		\/\/ when changing privilege (e.g.$/;"	m	struct:registers
+reg_ss	x86.h	/^	uint16_t reg_ss;		\/\/ in the order required by 'iret'$/;"	m	struct:registers
+registers	x86.h	/^typedef struct registers {$/;"	s
+registers_t	x86.h	/^} registers_t;$/;"	t	typeref:struct:registers
+run	GNUmakefile	/^run = $(1) $(3)$/;"	m
+run	GNUmakefile	/^run = @$(if $(2),\/bin\/echo " " $(2) $(3) &&,) $(1) $(3)$/;"	m
+run	x86.c	/^run(process_t *proc)$/;"	f
+schedule	kernel.c	/^schedule(void)$/;"	f
+scheduling_algorithm	kernel.c	/^int scheduling_algorithm;$/;"	v
+sd_avl	x86.h	/^	unsigned sd_avl : 1;        \/\/ Unused (available for software use)$/;"	m	struct:segmentdescriptor
+sd_base_15_0	x86.h	/^	unsigned sd_base_15_0 : 16; \/\/ Low bits of segment base address$/;"	m	struct:segmentdescriptor
+sd_base_23_16	x86.h	/^	unsigned sd_base_23_16 : 8; \/\/ Middle bits of segment base address$/;"	m	struct:segmentdescriptor
+sd_base_31_24	x86.h	/^	unsigned sd_base_31_24 : 8; \/\/ High bits of segment base address$/;"	m	struct:segmentdescriptor
+sd_db	x86.h	/^	unsigned sd_db : 1;         \/\/ 0 = 16-bit segment, 1 = 32-bit segment$/;"	m	struct:segmentdescriptor
+sd_dpl	x86.h	/^	unsigned sd_dpl : 2;        \/\/ Descriptor Privilege Level$/;"	m	struct:segmentdescriptor
+sd_g	x86.h	/^	unsigned sd_g : 1;          \/\/ Granularity: limit scaled by 4K when set$/;"	m	struct:segmentdescriptor
+sd_lim_15_0	x86.h	/^	unsigned sd_lim_15_0 : 16;  \/\/ Low bits of segment limit$/;"	m	struct:segmentdescriptor
+sd_lim_19_16	x86.h	/^	unsigned sd_lim_19_16 : 4;  \/\/ High bits of segment limit$/;"	m	struct:segmentdescriptor
+sd_p	x86.h	/^	unsigned sd_p : 1;          \/\/ Present$/;"	m	struct:segmentdescriptor
+sd_rsv1	x86.h	/^	unsigned sd_rsv1 : 1;       \/\/ Reserved$/;"	m	struct:segmentdescriptor
+sd_s	x86.h	/^	unsigned sd_s : 1;          \/\/ 0 = system, 1 = application$/;"	m	struct:segmentdescriptor
+sd_type	x86.h	/^	unsigned sd_type : 4;       \/\/ Segment type (see STS_ constants)$/;"	m	struct:segmentdescriptor
+segmentdescriptor	x86.h	/^typedef struct segmentdescriptor {$/;"	s
+segmentdescriptor_t	x86.h	/^} segmentdescriptor_t;$/;"	t	typeref:struct:segmentdescriptor
+segments	x86.c	/^static segmentdescriptor_t segments[] = {$/;"	v	file:
+segments_init	x86.c	/^segments_init(void)$/;"	f
+sh_addr	elf.h	/^	uint32_t sh_addr;$/;"	m	struct:Secthdr
+sh_addralign	elf.h	/^	uint32_t sh_addralign;$/;"	m	struct:Secthdr
+sh_entsize	elf.h	/^	uint32_t sh_entsize;$/;"	m	struct:Secthdr
+sh_flags	elf.h	/^	uint32_t sh_flags;$/;"	m	struct:Secthdr
+sh_info	elf.h	/^	uint32_t sh_info;$/;"	m	struct:Secthdr
+sh_link	elf.h	/^	uint32_t sh_link;$/;"	m	struct:Secthdr
+sh_name	elf.h	/^	uint32_t sh_name;$/;"	m	struct:Secthdr
+sh_offset	elf.h	/^	uint32_t sh_offset;$/;"	m	struct:Secthdr
+sh_size	elf.h	/^	uint32_t sh_size;$/;"	m	struct:Secthdr
+sh_type	elf.h	/^	uint32_t sh_type;$/;"	m	struct:Secthdr
+size_t	types.h	/^typedef uint32_t size_t;$/;"	t
+special_registers_init	x86.c	/^special_registers_init(process_t *proc)$/;"	f
+spinloop	bootstart.S	/^spinloop:	jmp spinloop		# ..but in case it does, spin.$/;"	l
+ssize_t	types.h	/^typedef int32_t ssize_t;$/;"	t
+start	bootstart.S	/^start:		.code16				# This runs in real mode$/;"	l
+start	kernel.c	/^start(void)$/;"	f
+strlen	lib.c	/^strlen(const char *s)$/;"	f
+strnlen	lib.c	/^strnlen(const char *s, size_t maxlen)$/;"	f
+sys_exit	process.h	/^sys_exit(int status)$/;"	f
+sys_int48_handler	k-int.S	/^sys_int48_handler:$/;"	l
+sys_int49_handler	k-int.S	/^sys_int49_handler:$/;"	l
+sys_int50_handler	k-int.S	/^sys_int50_handler:$/;"	l
+sys_int51_handler	k-int.S	/^sys_int51_handler:$/;"	l
+sys_int52_handler	k-int.S	/^sys_int52_handler:$/;"	l
+sys_int53_handler	k-int.S	/^sys_int53_handler:$/;"	l
+sys_int54_handler	k-int.S	/^sys_int54_handler:$/;"	l
+sys_int55_handler	k-int.S	/^sys_int55_handler:$/;"	l
+sys_int56_handler	k-int.S	/^sys_int56_handler:$/;"	l
+sys_int57_handler	k-int.S	/^sys_int57_handler:$/;"	l
+sys_int_handlers	k-int.S	/^sys_int_handlers:$/;"	l
+sys_yield	process.h	/^sys_yield(void)$/;"	f
+taskstate	x86.h	/^typedef struct taskstate {$/;"	s
+taskstate_t	x86.h	/^} taskstate_t;$/;"	t	typeref:struct:taskstate
+test_event	build/qemu-nograb.c	/^static fake_qemu_put_mouse_event* test_event;$/;"	v	file:
+test_mode	build/qemu-nograb.c	/^static int test_mode = 0;$/;"	v	file:
+test_name	build/qemu-nograb.c	/^static char* test_name;$/;"	v	file:
+tlbflush	x86.h	/^tlbflush(void)$/;"	f
+track	build/qemu-nograb.c	/^static inline void track(size_t nmemb, size_t sz, void* ptr) {$/;"	f	file:
+ts_cr3	x86.h	/^	physaddr_t ts_cr3;	\/\/ Page directory base$/;"	m	struct:taskstate
+ts_cs	x86.h	/^	uint16_t ts_cs;$/;"	m	struct:taskstate
+ts_ds	x86.h	/^	uint16_t ts_ds;$/;"	m	struct:taskstate
+ts_eax	x86.h	/^	uint32_t ts_eax;	\/\/ More saved state (registers)$/;"	m	struct:taskstate
+ts_ebp	x86.h	/^	uintptr_t ts_ebp;$/;"	m	struct:taskstate
+ts_ebx	x86.h	/^	uint32_t ts_ebx;$/;"	m	struct:taskstate
+ts_ecx	x86.h	/^	uint32_t ts_ecx;$/;"	m	struct:taskstate
+ts_edi	x86.h	/^	uint32_t ts_edi;$/;"	m	struct:taskstate
+ts_edx	x86.h	/^	uint32_t ts_edx;$/;"	m	struct:taskstate
+ts_eflags	x86.h	/^	uint32_t ts_eflags;$/;"	m	struct:taskstate
+ts_eip	x86.h	/^	uintptr_t ts_eip;	\/\/ Saved state from last task switch$/;"	m	struct:taskstate
+ts_es	x86.h	/^	uint16_t ts_es;		\/\/ Even more saved state (segment selectors)$/;"	m	struct:taskstate
+ts_esi	x86.h	/^	uint32_t ts_esi;$/;"	m	struct:taskstate
+ts_esp	x86.h	/^	uintptr_t ts_esp;$/;"	m	struct:taskstate
+ts_esp0	x86.h	/^	uintptr_t ts_esp0;	\/\/ Stack pointers and segment selectors$/;"	m	struct:taskstate
+ts_esp1	x86.h	/^	uintptr_t ts_esp1;$/;"	m	struct:taskstate
+ts_esp2	x86.h	/^	uintptr_t ts_esp2;$/;"	m	struct:taskstate
+ts_fs	x86.h	/^	uint16_t ts_fs;$/;"	m	struct:taskstate
+ts_gs	x86.h	/^	uint16_t ts_gs;$/;"	m	struct:taskstate
+ts_iomb	x86.h	/^	uint16_t ts_iomb;	\/\/ I\/O map base address$/;"	m	struct:taskstate
+ts_ldt	x86.h	/^	uint16_t ts_ldt;$/;"	m	struct:taskstate
+ts_link	x86.h	/^	uint32_t ts_link;	\/\/ Old ts selector$/;"	m	struct:taskstate
+ts_padding1	x86.h	/^	uint16_t ts_padding1;$/;"	m	struct:taskstate
+ts_padding10	x86.h	/^	uint16_t ts_padding10;$/;"	m	struct:taskstate
+ts_padding2	x86.h	/^	uint16_t ts_padding2;$/;"	m	struct:taskstate
+ts_padding3	x86.h	/^	uint16_t ts_padding3;$/;"	m	struct:taskstate
+ts_padding4	x86.h	/^	uint16_t ts_padding4;$/;"	m	struct:taskstate
+ts_padding5	x86.h	/^	uint16_t ts_padding5;$/;"	m	struct:taskstate
+ts_padding6	x86.h	/^	uint16_t ts_padding6;$/;"	m	struct:taskstate
+ts_padding7	x86.h	/^	uint16_t ts_padding7;$/;"	m	struct:taskstate
+ts_padding8	x86.h	/^	uint16_t ts_padding8;$/;"	m	struct:taskstate
+ts_padding9	x86.h	/^	uint16_t ts_padding9;$/;"	m	struct:taskstate
+ts_ss	x86.h	/^	uint16_t ts_ss;$/;"	m	struct:taskstate
+ts_ss0	x86.h	/^	uint16_t ts_ss0;	\/\/   after an increase in privilege level$/;"	m	struct:taskstate
+ts_ss1	x86.h	/^	uint16_t ts_ss1;$/;"	m	struct:taskstate
+ts_ss2	x86.h	/^	uint16_t ts_ss2;$/;"	m	struct:taskstate
+ts_t	x86.h	/^	uint16_t ts_t;		\/\/ Trap on task switch$/;"	m	struct:taskstate
+uint16_t	types.h	/^typedef unsigned short uint16_t;$/;"	t
+uint32_t	types.h	/^typedef unsigned long uint32_t;$/;"	t
+uint64_t	types.h	/^typedef unsigned long long uint64_t;$/;"	t
+uint8_t	types.h	/^typedef unsigned char uint8_t;$/;"	t
+uintptr_t	types.h	/^typedef uint32_t uintptr_t;$/;"	t
+upper_digits	lib.c	/^static const char upper_digits[] = "0123456789ABCDEF";$/;"	v	file:
+usage	build/mkbootdisk.c	/^usage(void)$/;"	f
+va_arg	lib.h	26;"	d
+va_end	lib.h	28;"	d
+va_list	lib.h	/^typedef char *va_list;$/;"	t
+va_start	lib.h	24;"	d
+waitdisk	boot.c	/^waitdisk(void)$/;"	f
+write_eflags	x86.h	/^write_eflags(uint32_t eflags)$/;"	f

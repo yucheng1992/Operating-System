@@ -1,0 +1,47 @@
+Name:
+net ID:
+NYU ID(N#):
+
+Collaborators (who you talked to about the lab, what you talked about):
+
+
+Source material that you consulted:
+
+
+Other acknowledgments:
+
+
+-------------------------------------------------------------------------------
+
+Response to Exercise 1:
+
+The name of the scheduling algorithm is:
+
+
+(Exercise 2 is a coding exercise)
+
+
+Response to Exercise 3:
+
+Average turnaround time for scheduling_algorithm 0:
+Average turnaround time for scheduling_algorithm 1:
+
+Average wait time for scheduling_algorithm 0:
+Average wait time for scheduling_algorithm 1:
+
+
+Exercise 4:
+
+Did you complete Exercise 4A, Exercise 4B, or both?
+
+
+Exercise 5:
+
+
+(Exercise 6 is a coding exercise)
+
+
+Anything else you'd like us to know:
+
+
+Honors supplement exercise(s) (describe what you coded):

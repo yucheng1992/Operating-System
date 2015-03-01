@@ -1,0 +1,13 @@
+init-if-undefined $target_set = 0
+if $target_set == 0
+    target remote localhost:__gdb_port__
+    file obj/kernel
+    add-symbol-file obj/bootsector 0x7c00
+    add-symbol-file obj/p-schedos-app-1 0x200000
+    add-symbol-file obj/p-schedos-app-2 0x300000
+    add-symbol-file obj/p-schedos-app-3 0x400000
+    add-symbol-file obj/p-schedos-app-4 0x400000
+    source build/functions.gdb
+    display/5i $pc
+    set $target_set = 1
+end
