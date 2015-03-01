@@ -73,6 +73,8 @@ start(void)
     for (i = 0; i < NPROCS; i++) {
         proc_array[i].p_pid = i;
         proc_array[i].p_state = P_EMPTY;
+        proc_array[i].p_timer = 0;
+        proc_array[i].p_share = 1;
     }
 
     // Set up process descriptors (the proc_array[])
@@ -231,7 +233,17 @@ schedule(void)
     }
     
     else if (scheduling_algorithm == 3) {
-
+        while (1) {
+            if (proc_array[pid].p_state == P_RUNNABLE) {
+                if (proc_array[pid].p_timer >= proc_array[pid].p_share) {
+                    proc_array[pid].p_timer = 0;
+                } else {
+                    proc_array[pid].p_timer++;
+                    run(&proc_array[pid]);
+                }
+            }
+            pid = (pid + 1) % NPROCS;
+        }
     }
     // If we get here, we are running an unknown scheduling algorithm.
     cursorpos = console_printf(cursorpos, 0x100, "\nUnknown scheduling algorithm %d\n", scheduling_algorithm);
